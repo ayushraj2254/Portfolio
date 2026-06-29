@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scattered Name Animation</title>
+    <style>
+        /* Reset body to center the content perfectly */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #111; /* Dark background to make letters pop */
+    color: #00ffcc; /* Neon cyan text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevents scrollbars if letters start off-screen */
+}
+
+/* Container for the name */
+.name-container {
+    display: flex;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Base styling for each letter */
+.letter {
+    display: inline-block;
+    opacity: 0; /* Hide initially */
+    /* Run the "assemble" animation: duration 1.5s, slow-down at the end, stay at the final frame */
+    animation: assemble 15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+}
+
+/* Space between the first and last name */
+.space {
+    width: 2rem;
+}
+
+/* The Keyframes driving the movement */
+@keyframes assemble {
+    0% {
+        /* Start from the scattered positions defined in the HTML */
+        transform: translate(var(--startX), var(--startY)) rotate(var(--startR));
+        opacity: 0;
+        filter: blur(5px);
+    } 
+    100% {
+        /* End at their natural inline position */
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="name-container">
+        <span class="letter" style="--startX: -300px; --startY: -200px; --startR: -45deg; animation-delay: 0.1s;">A</span>
+        <span class="letter" style="--startX: 250px; --startY: -350px; --startR: 70deg; animation-delay: 0.3s;">y</span>
+        <span class="letter" style="--startX: -200px; --startY: 250px; --startR: 120deg; animation-delay: 0.2s;">u</span>
+        <span class="letter" style="--startX: 300px; --startY: 150px; --startR: -90deg; animation-delay: 0.5s;">s</span>
+        <span class="letter" style="--startX: 50px; --startY: -400px; --startR: 30deg; animation-delay: 0.4s;">h</span>
+        
+        <span class="space">&nbsp;</span>
+        
+        <span class="letter" style="--startX: -400px; --startY: 50px; --startR: -150deg; animation-delay: 0.6s;">R</span>
+        <span class="letter" style="--startX: 200px; --startY: -200px; --startR: 45deg; animation-delay: 0.2s;">a</span>
+        <span class="letter" style="--startX: -100px; --startY: 350px; --startR: 180deg; animation-delay: 0.7s;">j</span>
+    </div>
+
+</body>
+</html>

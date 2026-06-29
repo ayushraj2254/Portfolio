@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web page</title>
+    <style>
+        h1,
+        span {
+            padding: 30px;
+            font-family: sans-serif;
+            color: white;
+            font-size: 30px;
+
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: lighter;
+        }
+
+        body {
+            color: white;
+            background-image: url(images.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            /* background: linear-gradient(purple),url(images.jpg)no-repeat center center/cover; */
+
+        }
+
+        #login {
+            float: right;
+        }
+
+        button {
+            background-color: blue; 
+            color: aliceblue;
+            font-size: 20px;
+            padding: 5px;
+            border: 0px ridge blue;
+            height: 50px;
+            width: 150px;
+            box-shadow: 0 4px 15px blue;
+            
+            border-radius: 4px;
+        }
+
+        input {
+            background-color: transparent;
+            padding: 2px;
+            margin: 4px;
+            width: 332px;
+            border-top: 2px;
+            border-left: 0;
+            border-right: 0;
+
+        }
+
+        input[type="name"] {
+            width: 100px;
+        }
+
+        input::placeholder {
+            color: whitesmoke;
+
+        }
+
+        p {
+            width: 600px;
+            color: blue;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span>Business</span>
+    <span>Job</span>
+    <span>Counselling</span>
+    <span id="login">Login</span>
+    <center>
+        <h1>Contact Us</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Facilis nulla enim fugiat sapiente aspernatur modi, reiciendis nemo est dolore delectus error id culpa
+            similique eligendi ducimus provident saepe quam cum.</p>
+        <br><br><br>
+        <input type="name" placeholder="Name">- <input type="name"> <input type="name"><br>
+        <input type="email" placeholder="E-mail">
+        <br><br>
+        <input type="text" placeholder="Message"><br><br>
+        <button>Let's talk</button>
+    </center>
+
+</body>
+
+</html>

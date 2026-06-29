@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> day7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(68, 65, 65, 0.973);
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            display: flex;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+            max-width: 1000px;
+            padding: 60px 20px;
+            box-sizing: border-box;
+        }
+
+        .main-title {
+            font-family: 'Courier New',  monospace;
+            text-transform: uppercase;
+            font-size: 85px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 3px 3px 3px white;
+
+        }
+
+        .sub-title {
+            color: rgb(202, 6, 38);
+            text-transform: uppercase;
+            text-shadow: 0 0 3px rgba(202, 6, 39, 0.863);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 100px;
+            letter-spacing: 2px;
+            font-size: 28px;
+            font-weight: 500;
+        }
+
+        span {
+            scale: 2;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 250px;
+
+        }
+
+        .bar {
+            width: 100%;
+            height: 25px;
+            border-radius: 12px;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            display: flex;
+            overflow: hidden;
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.6), 0 1px 1px rgba(255, 255, 255, 0.1);
+
+        }
+
+        .segment {
+            flex: 1;
+            z-index: 1;
+            position: relative;
+        }
+
+        .green {
+            background: linear-gradient(rgb(43, 226, 43), rgb(31, 153, 31));
+        }
+
+        .orange {
+            background: linear-gradient(rgb(255, 176, 86), rgb(220, 140, 20));
+            border-left: 2px solid rgba(0, 0, 0, 0.199);
+        }
+
+        .red {
+            background: linear-gradient(rgb(240, 24, 24), rgb(122, 14, 14));
+            border-left: 2px solid rgba(0, 0, 0, 0.199);
+        }
+
+        .purple {
+            background: linear-gradient(rgb(157, 74, 235), rgb(100, 10, 128));
+            border-left: 2px solid rgba(0, 0, 0, 0.199);
+        }
+
+        .blue {
+            background: linear-gradient(rgb(74, 77, 248), rgb(15, 13, 129));
+            border-left: 2px solid rgba(0, 0, 0, 0.199);
+        }
+
+        .text {
+            position: absolute;
+            width: 20%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0 10px;
+
+        }
+
+        .top1 {
+            left: 0%;
+        }
+
+        .top2 {
+            left: 40%;
+        }
+
+        .top3 {
+            left: 80%;
+        }
+
+        .bottom1 {
+            left: 20%;
+
+        }
+
+        .bottom2 {
+            left: 60%;
+        }
+
+        .down {
+            bottom: 0%;
+        }
+
+        /* .up {
+            top: 0%;
+        } */
+
+        .dot {
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.636), inset 0 1px 4px rgba(0, 0, 0, 0.33);
+        }
+
+        .end {
+            margin-top: 45px;
+            height: 2px;
+            border: 0;
+
+            background-color: rgba(255, 255, 255, 0.178);
+        }
+
+        .line {
+            position: absolute;
+            left: 49.5%;
+            height: 45px;
+            width: 2px;
+            z-index: 3;
+            background-color: white;
+        }
+
+
+        .text.up {
+            bottom: 50%;
+            padding-bottom: 50px;
+        }
+
+        .text.down {
+            top: 50%;
+            padding-top: 50px;
+        }
+
+
+        .text p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: small;
+        }
+       
+        .l1{
+            top: 0%;
+        }
+        .l2{
+            top: 0%;
+        }
+        .l3{
+            bottom: 0%;
+        }
+        .l4{
+            bottom: 0%;
+        }.l5{
+            bottom: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title"> design & build</h1>
+        <h2 class="sub-title">hi,i'm ayush and i <span>&#10084</span> to bring ideas to life</h2>
+        <div class="box">
+            <div class="text up top1">
+                <h4>GRAPHIC DESIGN</h4>
+                <p>I make things look good</p>
+                <div class="line l3"></div>
+            </div>
+            <div class="text up top2">
+                <h4>HAML & SASS</h4>
+                <p>Minimastic,simple code</p>
+                <div class="line l4"></div>
+            </div>
+            <div class="text up top3">
+                <h4>RUBY ON RAILS</h4>
+                <p>My framework of choice!</p>
+                <div class="line l5"></div>
+            </div>
+            <div class="text down bottom1">
+                <div class="line l1"></div>
+                <h4>CSS & HTML</h4>
+                <P>Semantic and clean markup</P>
+            </div>
+            <div class="text down bottom2">
+                <div class="line l2"></div>
+                <h4>JAVASCRIPT</h4>
+                <P>Client side scripting</P>
+            </div>
+            <div class="bar">
+                <div class="segment green">
+                    <div class="dot"></div>
+                </div>
+                <div class="segment orange">
+                    <div class="dot"></div>
+                </div>
+                <div class="segment red">
+                    <div class="dot"></div>
+                </div>
+                <div class="segment purple">
+                    <div class="dot"></div>
+                </div>
+                <div class="segment blue">
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="end">
+    </div>
+</body>
+
+</html>

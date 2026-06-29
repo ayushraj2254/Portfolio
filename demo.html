@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Shop</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--secondary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #004494;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1562664377-709f2c337eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 5%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* GENERAL SECTION STYLING */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        /* SERVICES GRID */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+        }
+
+        /* HOW IT WORKS PROCESS */
+        .process {
+            background-color: var(--white);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            line-height: 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* WHY CHOOSE US */
+        .why-us {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .why-us .section-title {
+            color: var(--white);
+        }
+
+        .why-us .card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            box-shadow: none;
+        }
+
+        .why-us .card p {
+            color: #ddd;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        footer h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #111; 
+            color: #888;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a real app, you'd add a hamburger menu here */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Premium Prints</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#process">How it Works</a>
+        </div>
+        <a href="#contact"><button class="btn">Request a Quote</button></a>
+    </nav>
+
+    <header class="hero">
+        <h1>Bringing Your Ideas to Print</h1>
+        <p>From elegant wedding invitations to professional business cards, we deliver premium, fast, and reliable printing right here in Hajipur.</p>
+        <div class="hero-buttons">
+            <button class="btn">Request a Free Quote</button>
+            <button class="btn btn-outline">View Our Work</button>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2 class="section-title">Our Core Services</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Wedding & Event Invitations</h3>
+                <p>Celebrate your special moments with premium paper, custom designs, and elegant finishes.</p>
+            </div>
+            <div class="card">
+                <h3>Business & Corporate Branding</h3>
+                <p>Make a lasting impression with high-quality business cards, ID cards, and letterheads.</p>
+            </div>
+            <div class="card">
+                <h3>Banners & Promotional Materials</h3>
+                <p>Stand out with vibrant, large-format flex banners and crisp promotional flyers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <h2 class="section-title">How It Works</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="step-number">1</div>
+                <h3>Share Your Vision</h3>
+                <p>Upload your ready-to-print design or tell us exactly what you need.</p>
+            </div>
+            <div class="card">
+                <div class="step-number">2</div>
+                <h3>Approve the Quote</h3>
+                <p>Review our quick price estimate and digital proof before we start.</p>
+            </div>
+            <div class="card">
+                <div class="step-number">3</div>
+                <h3>Print & Pick Up</h3>
+                <p>Your high-quality prints will be ready for pickup in-store quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Unmatched Quality</h3>
+                <p>We use the finest paper stocks and sharpest, most vibrant inks available.</p>
+            </div>
+            <div class="card">
+                <h3>Quick Turnaround</h3>
+                <p>Fast processing to ensure you meet your tight deadlines without stress.</p>
+            </div>
+            <div class="card">
+                <h3>Trusted Locally</h3>
+                <p>Decades of experience serving the Hajipur community with care.</p>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <footer id="contact">
+        <div>
+            <h4>Contact Info</h4>
+            <ul>
+                <li>Phone: +91 98765 43210</li>
+                <li>Email: info@premiumprints.com</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Location</h4>
+            <p>Main Market Road<br>Hajipur, Bihar</p>
+        </div>
+        <div>
+            <h4>Business Hours</h4>
+            <ul>
+                <li>Mon - Sat: 10:00 AM - 8:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Premium Prints. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

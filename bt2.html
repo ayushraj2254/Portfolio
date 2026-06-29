@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use of component</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        /* .carousel-item{
+                height: auto;
+                
+            } */
+             .card img {
+                height: 300px;
+                margin-top: 3px;
+             }
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 1px 6px rgba(102, 100, 100, 0.5);
+}
+
+.card{
+    transition: ease-in .5s;
+    margin-right: 1rem;
+    width: 20rem;
+    border: 5px groove #eef06399;
+}
+body{
+    background-color: rgb(229 217 212);
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container ps-0 mg-1 bg-light rounded-pill ">
+            <a class="navbar-brand text-white border-end border-dark   p-2 bg-primary" href="bt2.html"
+                style="border-top-left-radius: 50rem;border-bottom-left-radius: 50rem;">INTERNS</a>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="bt2.html">Home</a>
+                    <a class="nav-link " href="btstrp.html">ABOUT</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleInterval" class="carousel slide m-5 mt-1" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWrn42eBhmkOvtGorHuwVE_TLD_NC5eRDpQA&s"
+                    class="d-block  img-fluid object-fit-cover w-100" style="height: 400px;" alt="qoute">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtTrnSIA8GLkeuj_gfmOPMaQ6hA_P-OMqCIw&s"
+                    class="d-block img-fluid object-fit-cover w-100" style="height: 400px;" alt="quote">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpDC-W48KBJ5QS-O8ek-hNOCClU3bK2jc3Gg&s"
+                    class="d-block img-fluid object-fit-cover  w-100" style="height: 400px;" alt="quote">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container  mb-3 mt-3"> <h1 style="width: fit-content; font-family: serif; font-weight: bold;">OUR TEAM</h1></div>
+    <div class="container" style="background-color: #eef06383;">
+        <div class="row row-cols-md-3 row-cols-1 justify-content-center  row-cols-sm-2  g-4 " >
+
+            <div class="card col" >
+                <img src="IMG_20240715_214547.jpg" class="card-img-top " alt="its me">
+                <div class="card-body">
+                    <h5 class="card-title">AYUSH RAJ</h5>
+                    <p class="card-text">Branch: CSE <br>
+                     Roll no.:07 <br>
+                    Semester:5
+                    <p class="card-text"></p>
+                    <a href="https://www.linkedin.com/in/ayush-raj-11741b336?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        class="btn btn-primary">View profile</a>
+                </div>
+            </div>
+            <div class="card col" >
+                <img src="hariom.jpeg" class="card-img-top" alt="Hariom">
+                <div class="card-body">
+                    <h5 class="card-title">Hariom Kumar</h5>
+                    <p class="card-text">Branch- CSE <br>
+                        Roll No. -21 <br> Semester-5
+                    </p>
+                    <a href="https://www.linkedin.com/in/hariom-gupta-161a34342?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+            <div class="card col " >
+                <img src="sahilr.jpeg" class="card-img-top" alt="Sahil">
+                <div class="card-body">
+                    <h5 class="card-title">Sahil Raj</h5>
+                    <p class="card-text"> Branch- CSE <BR> Roll no. - 06 <br>Semester-5
+                    </p>
+                    <a href="https://www.linkedin.com/in/sahil-raj-932b66336?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        
+        
+            <div class="card col " >
+                <img src="sahil2.jpeg" class="card-img-top" alt="ranjan">
+                <div class="card-body">
+                    <h5 class="card-title">Sahil Ranjan</h5>
+                    <p class="card-text"> Branch- CSE <br> Roll No.- 26 <br> Semester-5</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+            <div class="card col" >
+                <img src="gautam.jpeg" class="card-img-top" alt="gautam">
+                <div class="card-body">
+                    <h5 class="card-title">Gautam Raj Dangi</h5>
+                    <p class="card-text">Branch-CSE <br>Roll No.- 15 <br> Semester-5</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+            <div class="card col " >
+                <img src="https://png.pngtree.com/png-clipart/20231004/original/pngtree-illustration-of-a-big-smile-png-image_13098068.png" class="card-img-top" alt="rajnandani">
+                <div class="card-body">
+                    <h5 class="card-title">Rajnandani</h5>
+                    <p class="card-text">Branch-CSE <br>Roll No.- 612 <br> Semester-5</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

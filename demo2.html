@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Premier Printing Press</title>
+    <style>
+        /* CSS Resets & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #00a8ff; /* Cyan accent for printing theme */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00a8ff;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.8)), url('https://images.unsplash.com/photo-1562664377-709f2c337eb2?auto=format&fit=crop&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Story Section */
+        .story-section {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+            border-top: 4px solid #e1b12c; /* Yellow accent */
+        }
+
+        .story-section h2 {
+            color: #111;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .story-section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        /* Features/Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .value-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid #e84118; /* Magenta/Red accent */
+        }
+
+        .value-card h3 {
+            margin-bottom: 1rem;
+            color: #111;
+            font-size: 1.4rem;
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+        }
+
+        .cta h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #00a8ff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0097e6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            background: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Print<span>Works</span></a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>About Us</h1>
+        <p>Bringing your ideas to life with precision, color, and unparalleled craftsmanship.</p>
+    </section>
+
+    <div class="container">
+        
+        <section class="story-section">
+            <h2>Our Story</h2>
+            <p>Welcome to PrintWorks, your trusted partner in professional printing. Founded by Ayush Raj, our facility has grown from a specialized local shop into a full-service printing press dedicated to serving businesses, creatives, and organizations with the utmost care.</p>
+            <p>We believe that every print makes a vital first impression. Whether you need a single custom poster, large-format vinyl banners, or thousands of corporate brochures, we approach every project with the exact same level of dedication. We strive to make professional printing accessible, affordable, and completely hassle-free.</p>
+        </section>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>State-of-the-Art Technology</h3>
+                <p>We utilize the latest digital and offset printing equipment to ensure crisp, flawless, and consistent color reproduction on every single run.</p>
+            </div>
+            <div class="value-card">
+                <h3>Uncompromising Quality</h3>
+                <p>Every project goes through strict quality control checks. From selecting premium paper stocks to the final trim, we guarantee excellence.</p>
+            </div>
+            <div class="value-card">
+                <h3>Eco-Friendly Options</h3>
+                <p>We are committed to sustainability, offering recycled paper choices, environmentally conscious inks, and responsible waste management.</p>
+            </div>
+        </div>
+
+        <section class="cta">
+            <h2>Ready to start your next printing project?</h2>
+            <p style="margin-bottom: 2rem; color: #ccc;">Our team is ready to help your brand stand out on paper.</p>
+            <a href="#" class="cta-button">Get a Free Quote</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PrintWorks. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
